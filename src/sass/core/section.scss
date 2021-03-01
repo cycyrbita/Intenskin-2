@@ -1,0 +1,15 @@
+
+.section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-repeat: no-repeat;
+
+    &_face {
+        overflow: hidden;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-image: url("../media/section/face.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+}

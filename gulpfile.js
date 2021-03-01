@@ -62,9 +62,9 @@ gulp.task('sync', function () {
   });
 
   gulp.watch(['src/template/*.html', 'src/js/*.js', 'src/media/', 'src/fonts/']).on('change', browserSync.reload);
-  gulp.watch('src/sass/**/*.scss', gulp.series('sass', 'lintCss', 'gcmq'));
+  gulp.watch('src/sass/**/*.scss', gulp.series('sass', 'gcmq'));
   gulp.watch('src/js/plugin/**/*.js', gulp.series('js'));
   gulp.watch('src/template/ejs/**/*.ejs', gulp.series('del', 'ejs'));
 });
 
-gulp.task('default', gulp.series('sass', 'lintCss', 'gcmq', 'js', 'ejs', 'sync'));
+gulp.task('default', gulp.series('sass', 'gcmq', 'js', 'ejs', 'sync'));

@@ -2,17 +2,33 @@
 /* stylelint-disable */
 
 @font-face {
-  font-family: 'formular';
-  src: url('../fonts/formular/formular-medium.woff2') format('woff2'),
-       url('../fonts/formular/formular-medium.woff') format('woff');
+  font-family: 'Baskerville';
+  src: url('../fonts/Baskerville/Baskerville.woff2') format('woff2'),
+      url('../fonts/Baskerville/Baskerville.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'formular';
-  src: url('../fonts/formular/formular-light.woff2') format('woff2'),
-       url('../fonts/formular/formular-light.woff') format('woff');
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria/Geometria-Regular.woff2') format('woff2'),
+      url('../fonts/Geometria/Geometria-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria/Geometria-LightItalic.woff2') format('woff2'),
+      url('../fonts/Geometria/Geometria-LightItalic.woff') format('woff');
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../fonts/Geometria/Geometria-Bold.woff2') format('woff2'),
+      url('../fonts/Geometria/Geometria-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
 }
