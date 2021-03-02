@@ -23,6 +23,13 @@
         background-position: center;
         background-size: cover;
     }
+
+    &_problem {
+        padding-top: 110px;
+        background-image: url("../media/section/problem.jpg");
+        background-position: center bottom;
+        background-size: cover;
+    }
 }
 
 .section__title {
@@ -47,7 +54,9 @@
 
     &_black {
         color: #24384e;
+    }
 
+    &_eclipse-right {
         &::before {
             left: auto;
             right: calc(100% + 18px);
