@@ -1,0 +1,118 @@
+
+.indicators {
+    max-width: 700px;
+}
+
+.indicators__title {
+    margin-bottom: 40px;
+
+    & span {
+        display: block;
+        font-size: 36px;
+    }
+}
+
+.indicators__item {
+    display: flex;
+    align-items: center;
+
+    & + & {
+        margin-top: 40px;
+    }
+
+    &:nth-child(1) {
+        & .indicators__media {
+            background-image: url('../media/indicators/item-1.jpg');
+        }
+    }
+
+    &:nth-child(2) {
+        & .indicators__media {
+            background-image: url('../media/indicators/item-2.jpg');
+        }
+    }
+
+    &:nth-child(3) {
+        & .indicators__media {
+            background-image: url('../media/indicators/item-3.jpg');
+        }
+    }
+}
+
+.indicators__media {
+    position: relative;
+    flex: 0 0 119px;
+    width: 119px;
+    height: 119px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+
+    &::before {
+        position: absolute;
+        left: calc(100% + 15px);
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 19px;
+        height: 22px;
+        background-image: url('../media/indicators/arrow.png');
+        background-repeat: no-repeat;
+    }
+}
+
+.indicators__description {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    border-radius: 24px;box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .indicators__title {
+        & br {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .indicators__item {
+        padding: 15px;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        border-radius: 24px;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
+        border: 1px solid #e8e8e8;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    .indicators__media {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &::before {
+            display: none;
+            left: 50%;
+            top: calc(100% + 15px);
+            transform: translate(-50%, 0) rotate(90deg);
+        }
+    }
+
+    .indicators__description {
+        padding: 10px;
+        font-size: 18px;
+        background-color: transparent;
+        border-radius: 24px;
+        box-shadow: none;
+    }
+
+    .indicators__title {
+        & span {
+            font-size: 20px;
+        }
+    }
+}

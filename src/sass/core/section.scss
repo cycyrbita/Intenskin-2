@@ -17,6 +17,12 @@
         background-color: #fff;
         overflow: hidden;
     }
+
+    &_indicators {
+        background-image: url("../media/section/indicators.jpg");
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 .section__title {
@@ -25,6 +31,7 @@
     color: #d2ada5;
     font-weight: 700;
     line-height: 1;
+    text-transform: uppercase;
 
     &::before {
         position: absolute;
@@ -37,10 +44,36 @@
         background-position: center;
         background-size: cover;
     }
+
+    &_black {
+        color: #24384e;
+
+        &::before {
+            left: auto;
+            right: calc(100% + 18px);
+            background-image: url("../media/section/title-eclipse-gray.png");
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        &_indicators {
+            padding-top: 505px !important;
+            background-image: url("../media/section/indicators-768.jpg");
+            background-position: center top;
+            background-size: auto;
+        }
+    }
 }
 
 @media (max-width: 480px) {
     .section__title {
         font-size: 36px;
+    }
+
+    .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
