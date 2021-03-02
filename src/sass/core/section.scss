@@ -1,7 +1,7 @@
 
 .section {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-repeat: no-repeat;
 
     &_face {
@@ -11,5 +11,36 @@
         background-image: url("../media/section/face.jpg");
         background-position: center;
         background-size: cover;
+    }
+
+    &_time {
+        background-color: #fff;
+        overflow: hidden;
+    }
+}
+
+.section__title {
+    position: relative;
+    font-size: 44px;
+    color: #d2ada5;
+    font-weight: 700;
+    line-height: 1;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: calc(100% + 18px);
+        width: 104px;
+        height: 45px;
+        content: "";
+        background-image: url("../media/section/title-eclipse.png");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .section__title {
+        font-size: 36px;
     }
 }

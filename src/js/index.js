@@ -5,6 +5,10 @@ $(document).ready(function () {
     //     disable: 'mobile'
     // });
 
+    $(".time__media").twentytwenty({
+        no_overlay: true
+    });
+
     $('.form__field').focus(function () {
         $(this).addClass('form__field_active')
     }).blur(function () {
