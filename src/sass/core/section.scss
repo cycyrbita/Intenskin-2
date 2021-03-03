@@ -66,6 +66,19 @@
             background-image: url('../media/extract/list-2.png');
         }
     }
+
+    &_age {
+        position: relative;
+        background-image: url("../media/section/age.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: #f1f1f1;
+
+        & .section__list-age {
+            position: absolute;
+            top: 50%;
+        }
+    }
 }
 
 @media (max-width: 1390px) {
@@ -78,6 +91,12 @@
     }
 }
 
+@media (max-width: 1250px) {
+    .section__list-age {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .section__list-extract-1 {
         top: 80%;
@@ -85,6 +104,12 @@
 
     .section__list-extract-2 {
         top: 80%;
+    }
+
+    .section__list-age {
+        display: block;
+        top: 150px !important;
+        left: -50px !important;
     }
 }
 
@@ -121,6 +146,17 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .section {
+        &_age {
+            padding-top: 310px !important;
+            background-image: url("../media/section/age-1024.jpg");
+            background-position: center top;
+            background-size: auto;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .section {
         &_indicators {
@@ -140,5 +176,9 @@
     .section {
         padding-top: 30px;
         padding-bottom: 30px;
+
+        &_extract {
+            padding-bottom: 60px;
+        }
     }
 }

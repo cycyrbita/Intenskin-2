@@ -1,0 +1,86 @@
+
+.age {
+    max-width: 690px;
+}
+
+.age__title {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.age__logo {
+    margin-bottom: 30px;
+    font-size: 114px;
+    font-family: 'Baskerville', sans;
+    color: #24384e;
+    line-height: 1;
+}
+
+.age__list {
+    max-width: 600px;
+}
+
+.age__item {
+    position: relative;
+    padding-left: 105px;
+    font-size: 22px;
+    color: #24384e;
+    min-height: 76px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    & + & {
+        margin-top: 22px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 76px;
+        height: 76px;
+        background-image: url("../media/age/check.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+    }
+}
+
+.age__btn {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 22px 103px;
+    margin-top: 60px;
+    font-size: 27px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #d2ada5;
+    border-radius: 50px;
+}
+
+@media (max-width: 1024px) {
+    .age__logo {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .age__item {
+        padding-left: 60px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 18px;
+        min-height: 45px;
+
+        &::before {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    .age__btn {
+        margin-top: 30px;
+        font-size: 22px;
+        padding: 15px 80px;
+    }
+}
