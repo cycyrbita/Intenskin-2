@@ -162,5 +162,139 @@
         background-image: url('../media/problem/arrow.png');
         background-repeat: no-repeat;
         content: '';
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    .problem__item {
+        max-width: 150px;
+
+        &::before {
+            right: -50px;
+        }
+    }
+
+    .problem__media {
+        display: none;
+    }
+
+    .problem__body {
+        margin-top: 60px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .problem__body-title {
+        font-size: 28px;
+    }
+
+    .problem__important span {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .problem__item::before {
+        right: -25px;
+        width: 10px;
+        height: 20px;
+    }
+
+    .problem__head span {
+        font-size: 13px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        &:first-child {
+            margin-left: 80px;
+        }
+    }
+
+    .problem__body p {
+        font-size: 18px;
+
+        & + p {
+            margin-top: 20px;
+        }
+    }
+
+    .problem__item {
+        max-width: 95px;
+    }
+}
+
+@media (max-width: 480px) {
+    .problem__body-title {
+        font-size: 21px;
+    }
+
+    .problem__subtitle span {
+        font-size: 18px;
+    }
+
+    .problem__body {
+        padding-right: 25px;
+        padding-left: 25px;
+
+        &::before {
+            right: 10px;
+            left: 10px;
+        }
+    }
+
+    .problem__important {
+        flex-direction: column;
+        align-items: flex-start;
+
+        & span {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    .problem__item {
+        max-width: 70px;
+
+        &::before {
+            right: -11px;
+            width: 7px;
+            height: 14px;
+        }
+    }
+
+    .problem__footer {
+        max-width: 240px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .problem__head span {
+        font-size: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .problem__box {
+        margin-top: 20px;
+    }
+
+    .problem__list_1 {
+        left: -45px;
+    }
+
+    .problem__body {
+        margin-top: 20px;
+    }
+
+    .problem__title {
+        margin-bottom: 20px;
     }
 }
