@@ -38,6 +38,11 @@
         background-size: cover;
         overflow: hidden;
     }
+
+    &_extract {
+        overflow: hidden;
+        background-color: #f2f9fc;
+    }
 }
 
 .section__title {

@@ -1,0 +1,150 @@
+
+.extract__head {
+    text-align: center;
+}
+
+.extract__title {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.extract__subtitle {
+    padding: 20px 70px;
+    margin-bottom: 30px;
+    border: 1px dashed #000;
+    font-size: 20px;
+
+    & mark {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.extract__body {
+    position: relative;
+}
+
+.extract__list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.extract__item {
+    flex: 0 0 335px;
+    width: 335px;
+    padding-left: 57px;
+    margin-top: 80px;
+}
+
+.extract__count {
+    margin-left: -57px;
+    font-size: 73px;
+    font-family: "Baskerville", serif;
+    line-height: 1;
+    color: #24384e;
+}
+
+.extract__description {
+    font-size: 20px;
+}
+
+.extract__product {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    width: 827px;
+    height: 460px;
+
+    &::after {
+        position: absolute;
+        left: 230px;
+        bottom: -68px;
+        width: 273px;
+        height: 196px;
+        content: '';
+        background-image: url("../media/extract/product-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        left: 400px;
+        bottom: 0;
+        width: 164px;
+        height: 179px;
+        content: '';
+        background-image: url("../media/extract/product-bg-right.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    .extract__body {
+        padding-bottom: 495px;
+    }
+
+    .extract__product {
+        top: auto;
+        bottom: 0;
+    }
+
+    .extract__item {
+        flex: 0 0 50%;
+        width: 50%;
+    }
+
+    .extract__list {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .extract__subtitle {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .extract__list {
+        margin-top: -30px;
+    }
+
+    .extract__count {
+        margin-left: -40px;
+        font-size: 50px;
+    }
+
+    .extract__description {
+        font-size: 18px;
+    }
+
+    .extract__item {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .extract__list {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .extract__item {
+        flex: 0 0 100%;
+        width: 100%;
+        padding-left: 41px;
+    }
+
+    .extract__subtitle {
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
