@@ -85,6 +85,11 @@
         position: relative;
         background-color: #fff;
     }
+
+    &_footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }
 
 @media (max-width: 1390px) {
@@ -104,6 +109,12 @@
 }
 
 @media (max-width: 1024px) {
+    .section {
+        &_commits {
+            padding-top: 0;
+        }
+    }
+
     .section__list-extract-1 {
         top: 80%;
     }

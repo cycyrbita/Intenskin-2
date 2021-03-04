@@ -1,0 +1,173 @@
+
+.commits__head {
+    text-align: center;
+}
+
+.commits__title {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 38px;
+
+    &::before {
+        top: -5px;
+    }
+}
+
+.commits__slider {
+    position: relative;
+    z-index: 1;
+    background-color: #e6f0f5;
+    padding: 55px 75px;
+    margin-bottom: 70px;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: 29px;
+        right: 29px;
+        bottom: 29px;
+        left: 29px;
+        border: 1px solid #fff;
+        content: '';
+    }
+
+    & .owl-nav {
+        position: absolute;
+        right: 0;
+        bottom: -70px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+
+        & button {
+            font-size: 20px !important;
+            font-weight: 300 !important;
+            border-bottom: 1px solid #24384e !important;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    & .owl-dots {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & button {
+            padding: 5px !important;
+            height: 31px;
+
+            & span {
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                border-radius: 50%;
+                border: 1px solid #24384e;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &.active {
+                & span {
+                    background-color: #24384e;
+                }
+            }
+        }
+    }
+}
+
+.commits__item {
+    display: flex;
+}
+
+.commits__media {
+    flex: 0 0 auto;
+    margin-right: 40px;
+}
+
+.commits__name {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #24384e;
+    text-transform: uppercase;
+}
+
+.commits__info {
+    font-size: 20px;
+    color: #24384e;
+
+    & > div {
+        & span {
+            display: block;
+            text-transform: uppercase;
+
+            & b {
+                font-weight: 700;
+            }
+        }
+
+        & + div {
+            margin-top: 15px;
+        }
+
+        & ul {
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+.commits__nextPrev {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .commits__slider {
+        padding: 50px;
+    }
+
+    .commits__item {
+        flex-direction: column;
+    }
+
+    .commits__media {
+        margin-right: 0;
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 768px) {
+    .commits__title {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .commits__slider {
+        padding: 30px 25px;
+        margin-bottom: 40px;
+
+        &::before {
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 10px;
+        }
+    }
+
+    .commits__slider .owl-dots {
+        bottom: -40px;
+    }
+}

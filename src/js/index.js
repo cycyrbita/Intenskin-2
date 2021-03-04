@@ -53,21 +53,19 @@ $(document).ready(function () {
         }, 1000);
     }
 
-    $('.js-commits__box').owlCarousel({
+    var $prev = $('.commits__nextPrev span:first-child').text(),
+        $next = $('.commits__nextPrev span:last-child').text();
+        
+
+    $('.js-commits__slider').owlCarousel({
         loop: true,
         autoHeight: true,
         margin: 40,
-        responsive : {
-            320 : {
-                items: 1
-            },
-
-            768 : {
-                items: 2
-            },
-
-            1280 : {
-                items: 3
+        items: 1,
+        responsive: {
+            768: {
+                nav: true,
+                navText: [$prev, $next]
             }
         }
     });
