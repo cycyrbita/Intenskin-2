@@ -79,6 +79,12 @@
             top: 50%;
         }
     }
+
+    &_top {
+        overflow: hidden;
+        position: relative;
+        background-color: #fff;
+    }
 }
 
 @media (max-width: 1390px) {
